@@ -22,19 +22,19 @@ public class Solution {
         if(((n+m)&1)==1)
         {
             if (mid < n)
-                return v1[mid];
+                med=v1[mid];
             else
-                return v2[mid-n];
+                med=v2[mid-n];
         }
         else
         {
             if (mid < n)
-                return (v1[mid-1] + v1[mid]) / 2.0;
+                med=(v1[mid-1] + v1[mid]) / 2.0;
             else if(mid==n)
-                return (v1[mid-1] + v2[0])/2.0;
+                med=(v1[mid-1] + v2[0])/2.0;
             else
-                return (v2[mid-n-1] + v2[mid - n]) / 2.0;
+                med=(v2[mid-n-1] + v2[mid - n]) / 2.0;
         }
-        return 0;
+        return med;
     }
 }
